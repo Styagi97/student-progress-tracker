@@ -29,7 +29,7 @@ export const TaskProvider = ({ children }) => {
     API.get(`/tasks/suggestion/${user.id}`)
       .then((data) => setSuggestion(data.data))
       .catch((err) => console.error("Suggestion error", err));
-  }, [user, tasks]);
+  }, [user]);
 
   // Login user and store token + user data in localStorage
   const loginUser = async (credentials) => {
