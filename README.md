@@ -9,6 +9,60 @@
 
 ---
 
+## ✨ Key Highlights
+
+- 🔐 JWT-based Authentication system  
+- 📝 Full Task Management (CRUD operations)  
+- 📊 Smart Analytics Dashboard  
+- 🔥 Daily Streak Tracking System  
+- 🧠 Intelligent Suggestion Engine (Backend AI logic)  
+- ⏰ Weekly Productivity Reports (Spring Boot Scheduler)  
+
+---
+
+## 🛠 Tech Stack
+
+### 💻 Frontend
+- React (Vite)
+- Tailwind CSS
+- Axios
+- Context API
+
+### ⚙️ Backend
+- Spring Boot
+- Spring Security
+- JWT Authentication
+- JPA / Hibernate
+
+### 🗄 Database
+- MySQL
+
+---
+
+## 📸 Screenshots
+
+### 🔐 Login Page
+![Login](./assets/login.png)
+
+### 📝 Register Page
+![Register](./assets/register.png)
+
+### 📊 Dashboard
+![Dashboard](./assets/dashboard.png)
+
+### 📋 All Tasks
+![All Tasks](./assets/all-tasks.png)
+
+### ⏳ Pending Tasks
+![Pending Tasks](./assets/pending-tasks.png)
+
+### ✅ Completed Tasks
+![Completed Tasks](./assets/completed-tasks.png)
+
+### ➕ Add Task
+![Add Task](./assets/add-task.png)
+
+
 ## ✨ Features
 
 ### 🔐 Authentication
@@ -39,23 +93,7 @@
 ### ⏰ Automation
 - Weekly report scheduler (Spring Boot)
 - Logs productivity insights
-
----
-
-## 🛠 Tech Stack
-
-### Frontend
-- React (Vite)
-- Tailwind CSS
-- Axios
-- Context API
-
-### Backend
-- Spring Boot
-- Spring Security
-- JWT Authentication
-- MySQL
-- JPA / Hibernate
+ 
 
 ---
 
@@ -63,36 +101,27 @@
 
 ### 🔐 Authentication APIs
 
-➤ Register
-POST /api/auth/register
-➤ Login
-POST /api/auth/login
-➤ Logout
-POST /api/auth/logout
+- POST `/api/auth/register` → Register user  
+- POST `/api/auth/login` → Login user  
+- POST `/api/auth/logout` → Logout user  
 
 
 ### 📋 Task APIs
-➤ Get All Tasks
-GET /api/tasks/{userId}
-➤ Create Task
-POST /api/tasks
-➤ Update Task
-PUT /api/tasks/{id}
-➤ Delete Task
-DELETE /api/tasks/{id}
+
+- GET `/api/tasks/{userId}` → Get all tasks  
+- POST `/api/tasks` → Create task  
+- PUT `/api/tasks/{id}` → Update task  
+- DELETE `/api/tasks/{id}` → Delete task 
 
 
-### 📊 Analytics APIs
-➤ Today Tasks
-GET /api/tasks/today/{userId}
-➤ Pending Tasks
-GET /api/tasks/pending/{userId}
-➤ Overdue Tasks
-GET /api/tasks/overdue/{userId}
-➤ Completion Rate
-GET /api/tasks/completion-rate/{userId}
-➤ Smart Suggestion
-GET /api/tasks/suggestion/{userId}
+### 📊 Analytics APIs 
+
+- GET `/api/tasks/today/{userId}` → Today tasks  
+- GET `/api/tasks/pending/{userId}` → Pending tasks  
+- GET `/api/tasks/overdue/{userId}` → Overdue tasks  
+- GET `/api/tasks/completion-rate/{userId}` → Completion rate  
+- GET `/api/tasks/suggestion/{userId}` → Smart suggestion  
+
 
 ## 📁 Project Structure
 
