@@ -10,7 +10,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
+@Valid
 @Entity
 public class Task {
 
@@ -18,7 +22,12 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+      @NotBlank(message = "Title is required")
+    @Size(max = 100, message = "Title cannot exceed 100 characters")
     private String title;
+
+      @NotBlank(message = "Description is required")
+    @Size(max = 255, message = "Description cannot exceed 255 characters")
     private String description;
 
     @Enumerated(EnumType.STRING)

@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.shivani.student_progress_tracker_backend.model.Task;
 import com.shivani.student_progress_tracker_backend.service.TaskService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/tasks")
 @CrossOrigin(origins = "*")
@@ -41,7 +43,7 @@ public class TaskController {
     // CREATE TASK
     // =========================
     @PostMapping
-    public Task createTask(@RequestBody Task task) {
+    public Task createTask(@Valid @RequestBody Task task) {
         return taskService.createTask(task);
     }
 
@@ -49,7 +51,7 @@ public class TaskController {
     // UPDATE TASK
     // =========================
     @PutMapping("/{id}")
-    public Task updateTask(@PathVariable Long id, @RequestBody Task task) {
+    public Task updateTask(@PathVariable Long id, @Valid @RequestBody Task task) {
         return taskService.updateTask(id, task);
     }
 

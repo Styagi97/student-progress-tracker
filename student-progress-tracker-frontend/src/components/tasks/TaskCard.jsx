@@ -25,20 +25,50 @@ const TaskCard = ({ task }) => {
     <>
       <div
         className={`p-4 rounded-2xl shadow-md flex justify-between items-center w-full transition-all
-  ${task.status === "COMPLETED" ? "bg-green-50 opacity-80" : "bg-white"}`}
+  ${
+    task.status === "COMPLETED" 
+    ? "bg-green-50 opacity-80"
+     : "bg-white"
+    }`}
       >
         {/* LEFT SIDE */}
         <div className="flex flex-col gap-1 flex-1 min-w-0">
           <h3
             className={`font-semibold ${
-              task.status === "COMPLETED" ? "line-through" : ""
+              task.status === "COMPLETED" 
+              ? "line-through" : ""
             }`}
           >
             {task.title}
           </h3>
 
-          <p className="text-sm text-gray-500">{task.description}</p>
+          <p className="text-sm text-gray-500">
+            {task.description}
+            </p>
 
+         {/* Time Info */}
+<p className="text-xs text-gray-400">
+  {task.updatedAt &&
+  task.createdAt !== task.updatedAt ? (
+    <>
+      ✏️ Updated:
+      {" "}
+      {new Date(task.updatedAt).toLocaleDateString()}
+      {" at "}
+      {new Date(task.updatedAt).toLocaleTimeString()}
+    </>
+  ) : (
+    <>
+      🕒 Created:
+      {" "}
+      {new Date(task.createdAt).toLocaleDateString()}
+      {" at "}
+      {new Date(task.createdAt).toLocaleTimeString()}
+    </>
+  )}
+</p>
+
+            {/* Status Badge */}
     {task.status && (
   <span
     className={`px-2 py-1 text-xs rounded  flex it gap-1 w-fit ${
@@ -47,7 +77,9 @@ const TaskCard = ({ task }) => {
         : "bg-yellow-500 text-white"
     }`}
   >
-  {task.status === "COMPLETED" ? "✔ Completed" : "⏳ Pending"}
+  {task.status === "COMPLETED" 
+  ? "✔ Completed" 
+  : "⏳ Pending"}
   </span>
 )}
         </div>
@@ -98,7 +130,11 @@ const TaskCard = ({ task }) => {
           )}
         </div>
       </div>
-      <EditTaskModal open={open} setOpen={setOpen} task={task} />
+      <EditTaskModal 
+      open={open} 
+      setOpen={setOpen} 
+      task={task}
+       />
 
     </>
   );
