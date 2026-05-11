@@ -27,18 +27,42 @@
 - Tailwind CSS
 - Axios
 - Context API
+- Formik
+- Yup
+- React Router DOM
+- React Hot Toast
 
 ### ⚙️ Backend
 - Spring Boot
 - Spring Security
 - JWT Authentication
-- JPA / Hibernate
+- Spring Data JPA
+- Hibernate
+- Lombok
 
 ### 🗄 Database
 - MySQL
 
 ---
+# 📦 Packages & Dependencies
 
+## Frontend Packages
+- react-router-dom
+- axios
+- react-hot-toast
+- formik
+- yup
+- tailwindcss
+
+## Backend Dependencies
+- spring-boot-starter-web
+- spring-boot-starter-security
+- spring-boot-starter-data-jpa
+- mysql-connector-j
+- jjwt
+- lombok
+
+---
 ## 📸 Screenshots
 
 ### 🔐 Login Page
@@ -137,6 +161,36 @@ student-progress-tracker/
 └── README.md
 ```
 
+## 📋 Prerequisites
+```
+Before running this project, make sure the following software is installed:
+
+- Node.js
+- npm
+- Java 21+
+- Maven
+- MySQL
+- Git
+```
+---
+
+## 🗄 Database Setup
+
+Create a MySQL database:
+
+```
+sql
+CREATE DATABASE student_tracker;
+```
+Update `application.properties` inside backend:
+
+```
+properties
+spring.datasource.url=jdbc:mysql://localhost:3306/student_tracker
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+
+```
 ---
 
 ## ⚙️ Setup Instructions
